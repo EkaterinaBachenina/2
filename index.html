@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Мои Заметки</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h1>Мои Заметки</h1>
+            <button class="new-note" id="addNoteBtn">Новая Заметка</button>
+            <div class="tags">
+                <p>Теги</p>
+                <ul id="tagsList">
+                    <li class="active" data-tag="Все">Все</li>
+                    <li data-tag="Идеи">Идеи</li>
+                    <li data-tag="Личное">Личное</li>
+                    <li data-tag="Работа">Работа</li>
+                    <li data-tag="Список покупок">Список покупок</li>
+                </ul>
+            </div>
+        </div>
+        <div class="notes-main">
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Поиск...">
+                <button class="search-btn" id="searchBtn">
+                    <img src="images/loo.svg" alt="поиск">
+                </button>
+            </div>
+            <div class="notes-list" id="notesList"></div>
+        </div>
+    </div>
+    <div id="noteModal" class="modal">
+        <div class="modal-content">
+            <textarea id="noteText" placeholder="Введите текст заметки..."></textarea>
+            <select id="noteTag">
+                <option>Идеи</option>
+                <option>Личное</option>
+                <option>Работа</option>
+                <option>Список покупок</option>
+            </select>
+            <button id="saveNoteBtn">Сохранить</button>
+            <button id="closeModalBtn">Отмена</button>
+        </div>
+    </div>
+    <script src="opa.js"></script>
+</body>
+</html>
